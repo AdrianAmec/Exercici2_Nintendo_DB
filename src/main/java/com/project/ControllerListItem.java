@@ -1,22 +1,14 @@
 package com.project;
 
-import java.net.URL;
 import java.util.Objects;
-import java.util.ResourceBundle;
 
-import javax.swing.border.StrokeBorder;
-
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.Initializable;
-import javafx.scene.Node;
 import javafx.scene.control.Label;
 import javafx.scene.effect.DropShadow;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.Border;
 import javafx.scene.paint.Color;
 
 public class ControllerListItem{

@@ -5,22 +5,17 @@ import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.EventListener;
 import java.util.Objects;
 import java.util.ResourceBundle;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
 
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Parent;
 import javafx.scene.control.Button;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.scene.layout.VBox;
 import javafx.scene.shape.Circle;
 import javafx.scene.text.Text;
 
@@ -44,6 +39,13 @@ public class ControllerMobile_3 extends Controller implements Initializable {
     private Text titulo,info;
     @FXML
     private Circle circle;
+    @FXML
+    private Button buttonBack;
+    
+    @FXML
+    public void back(){
+        UtilsViews.setView("Mobile_2");
+    }
 
 
     @Override
@@ -180,6 +182,7 @@ public class ControllerMobile_3 extends Controller implements Initializable {
                 continue;
             }
             character = jsonInfoGames.getJSONObject(i);
+            break;
 
         }
        //"name": "Super Mario Bros",
@@ -215,7 +218,7 @@ public class ControllerMobile_3 extends Controller implements Initializable {
 
 
     public void accion(String name) throws Exception{
-        System.out.println(name+" Viendo que cosa le envia");
+        //System.out.println(name+" Viendo que cosa le envia");
         opcion=((ControllerMobile_2)UtilsViews.getController("Mobile_2")).getOption();
 
         if (opcion.equals(options[0])){

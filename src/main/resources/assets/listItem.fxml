@@ -6,14 +6,14 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="select" maxHeight="-Infinity" minHeight="-Infinity" onMouseClicked="#selectOption" onMouseEntered="#glowOption" onMouseExited="#noGlowOption" prefHeight="61.0" prefWidth="260.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.project.ControllerListItem">
+<AnchorPane fx:id="select" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" onMouseClicked="#selectOption" onMouseEntered="#glowOption" onMouseExited="#noGlowOption" prefHeight="83.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.project.ControllerListItem">
    <children>
-      <Label fx:id="title" layoutX="78.0" layoutY="12.0" prefHeight="40.0" prefWidth="178.0" text="TitleText" AnchorPane.leftAnchor="78.0" AnchorPane.rightAnchor="4.0" AnchorPane.topAnchor="12.0">
+      <Label fx:id="title" layoutX="102.0" layoutY="29.0" text="TitleText" AnchorPane.leftAnchor="102.0" AnchorPane.rightAnchor="0.39999999999997726" AnchorPane.topAnchor="29.0">
          <font>
             <Font size="16.0" />
          </font>
       </Label>
-      <ImageView fx:id="img" fitHeight="61.0" fitWidth="77.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="183.0" AnchorPane.topAnchor="0.0" />
+      <ImageView fx:id="img" fitHeight="74.0" fitWidth="85.0" layoutX="-0.8" layoutY="-1.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="4.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="231.0" AnchorPane.topAnchor="5.0" />
       <Pane prefHeight="1.0" style="-fx-background-color: #aaaaaa;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
    </children>
 </AnchorPane>

@@ -5,7 +5,6 @@ import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.EventListener;
 import java.util.ResourceBundle;
 
 import org.json.JSONArray;
@@ -34,10 +33,16 @@ public class ControllerMobile_2 extends Controller implements Initializable {
     @FXML
     private VBox yPane2;
 
+    @FXML
+    private Button buttonBack;
+    
     @FXML 
     private Text textMobile2;
 
-    
+    @FXML
+    public void back(ActionEvent event){
+        UtilsViews.setView("Mobile_1");
+    }
     public void updateDatos(){
         
         opcion=((ControllerMobile)UtilsViews.getController("Mobile_1")).getOption();

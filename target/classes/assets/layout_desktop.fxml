@@ -12,7 +12,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane fx:id="container" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.project.ControllerDesktop">
+<AnchorPane fx:id="container" prefHeight="474.0" prefWidth="602.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.project.ControllerDesktop">
    <children>
       <VBox style="-fx-background-color: #dadada;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
@@ -21,18 +21,18 @@
                   <Font size="34.0" />
                </font>
             </Text>
-            <HBox fx:id="hBoxC" prefHeight="327.0" prefWidth="570.0">
+            <HBox fx:id="hBoxC" prefWidth="570.0">
                <children>
-                  <VBox fx:id="vBoxR" prefHeight="326.0" prefWidth="223.0">
+                  <VBox fx:id="vBoxR" prefWidth="261.0">
                      <children>
                         <ChoiceBox fx:id="choiceBox" prefHeight="25.0" prefWidth="197.0">
                            <VBox.margin>
                               <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                            </VBox.margin>
                         </ChoiceBox>
-                        <ScrollPane fx:id="sPane" hbarPolicy="NEVER" prefHeight="282.0" prefWidth="198.0" vbarPolicy="NEVER">
+                        <ScrollPane fx:id="sPane" hbarPolicy="NEVER" prefWidth="198.0" vbarPolicy="NEVER">
                            <content>
-                              <VBox fx:id="yPane" prefHeight="279.0" prefWidth="194.0">
+                              <VBox fx:id="yPane" prefWidth="194.0">
                                  <cursor>
                                     <Cursor fx:constant="V_RESIZE" />
                                  </cursor></VBox>
@@ -40,25 +40,32 @@
                         </ScrollPane>
                      </children>
                   </VBox>
-                  <VBox fx:id="vBoxL" alignment="TOP_CENTER" prefHeight="322.0" prefWidth="372.0">
-                     <children>
-                        <ImageView fx:id="gameImage" fitHeight="173.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
-                        <Text fx:id="gameTitulo" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" textAlignment="CENTER" wrappingWidth="372.13671875">
-                           <VBox.margin>
-                              <Insets bottom="20.0" />
-                           </VBox.margin>
-                           <font>
-                              <Font size="24.0" />
-                           </font>
-                        </Text>
-                        <Circle fx:id="circle" centerY="50.0" fill="DODGERBLUE" radius="8.0" rotate="45.0" stroke="BLACK" strokeType="INSIDE">
-                           <VBox.margin>
-                              <Insets />
-                           </VBox.margin>
-                        </Circle>
-                        <Text fx:id="gameInfo" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" textAlignment="CENTER" wrappingWidth="373.13671875" />
-                     </children>
-                  </VBox>
+                  <ScrollPane hbarPolicy="NEVER" prefWidth="356.0" vbarPolicy="NEVER">
+                     <content>
+                        <VBox fx:id="vBoxL" alignment="TOP_CENTER">
+                           <cursor>
+                              <Cursor fx:constant="V_RESIZE" />
+                           </cursor>
+                           <children>
+                              <ImageView fx:id="gameImage" fitHeight="339.0" fitWidth="352.0" pickOnBounds="true" preserveRatio="true" />
+                              <Text fx:id="gameInfo" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="373.13671875" />
+                              <Circle fx:id="circle" centerY="50.0" fill="WHITE" radius="8.0" stroke="BLACK" strokeType="INSIDE">
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                              </Circle>
+                              <Text fx:id="gameTitulo" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="372.13671875">
+                                 <VBox.margin>
+                                    <Insets bottom="20.0" />
+                                 </VBox.margin>
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </VBox>
+                     </content>
+                  </ScrollPane>
                </children>
             </HBox>
          </children>

@@ -1,0 +1,18 @@
+.circular-button {
+ 
+    -fx-background-radius: 50; 
+    -fx-border-radius: 50;
+
+    /* Opcional: Esto ayuda a que el fondo sea un círculo perfecto */
+    -fx-shape: "M 0 0 L 100 0 L 100 100 L 0 100 z"; /* Un cuadrado base */
+    
+    /* Opcional: Estilos visuales */
+    -fx-background-color: #7f8086; /* Un color de fondo */
+    -fx-border-color: transparent; /* Quita el borde nativo */
+    -fx-text-fill: white; /* Color del icono/texto */
+}
+
+/* Opcional: Efecto al pasar el ratón */
+.circular-button:hover {
+    -fx-background-color: #474850;
+}

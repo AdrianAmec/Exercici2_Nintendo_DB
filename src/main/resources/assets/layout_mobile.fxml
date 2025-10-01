@@ -7,18 +7,18 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.project.ControllerMobile">
+<AnchorPane xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.project.ControllerMobile">
    <children>
       <VBox style="-fx-background-color: #aadaaa;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Nintendo DB" textAlignment="CENTER" wrappingWidth="566.9903564453125">
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Nintendo DB" textAlignment="CENTER" wrappingWidth="373.390380859375">
                <font>
                   <Font name="Lato Black" size="55.0" />
                </font>
             </Text>
-            <Button fx:id="characters" mnemonicParsing="false" onAction="#changeView2" prefHeight="10.0" prefWidth="589.0" text="Characters" />
-            <Button fx:id="games" mnemonicParsing="false" onAction="#changeView2" prefHeight="10.0" prefWidth="589.0" text="Games" />
-            <Button fx:id="consoles" mnemonicParsing="false" onAction="#changeView2" prefHeight="10.0" prefWidth="589.0" text="Consoles" />
+            <Button fx:id="characters" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#changeView2" prefHeight="40.0" styleClass="circular-button" stylesheets="@styles.css" text="Characters" />
+            <Button fx:id="games" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#changeView2" prefHeight="50.0" styleClass="circular-button" stylesheets="@styles.css" text="Games" />
+            <Button fx:id="consoles" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#changeView2" prefHeight="50.0" styleClass="circular-button" stylesheets="@styles.css" text="Consoles" />
          </children>
       </VBox>
    </children>
