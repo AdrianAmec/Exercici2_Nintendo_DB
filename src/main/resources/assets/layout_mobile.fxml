@@ -1,25 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.project.ControllerMobile">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.project.ControllerMobile">
    <children>
       <VBox style="-fx-background-color: #aadaaa;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Mobile view">
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Nintendo DB" textAlignment="CENTER" wrappingWidth="566.9903564453125">
                <font>
                   <Font name="Lato Black" size="55.0" />
                </font>
             </Text>
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Fes més gran la finestra per canviar a la vista 'Desktop'" wrappingWidth="274.3828125">
-               <font>
-                  <Font size="16.0" />
-               </font>
-            </Text>
+            <Button fx:id="characters" mnemonicParsing="false" onAction="#changeView2" prefHeight="10.0" prefWidth="589.0" text="Characters" />
+            <Button fx:id="games" mnemonicParsing="false" onAction="#changeView2" prefHeight="10.0" prefWidth="589.0" text="Games" />
+            <Button fx:id="consoles" mnemonicParsing="false" onAction="#changeView2" prefHeight="10.0" prefWidth="589.0" text="Consoles" />
          </children>
       </VBox>
    </children>

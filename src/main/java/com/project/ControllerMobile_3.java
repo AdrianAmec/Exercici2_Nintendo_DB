@@ -1,83 +1,53 @@
 package com.project;
 
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
 import java.net.URL;
+import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.nio.charset.StandardCharsets;
-import java.util.ArrayList;
+import java.util.EventListener;
 import java.util.Objects;
 import java.util.ResourceBundle;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
 
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import java.util.ArrayList;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.control.Button;
-import javafx.scene.control.ChoiceBox;
-import javafx.scene.text.Text;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
-import javafx.scene.control.TextField;
-import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.event.ActionEvent;
-import javafx.scene.control.Label;
-import javafx.scene.control.ScrollPane;
-import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.HBox;
-import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
 import javafx.scene.shape.Circle;
+import javafx.scene.text.Text;
 
-public class ControllerDesktop extends Controller implements Initializable{
+public class ControllerMobile_3 extends Controller implements Initializable {
+
 
     //cada Json en su propia variable
     private JSONArray jsonInfoCharacters;
     private JSONArray jsonInfoConsoles;
     private JSONArray jsonInfoGames;
-
-    //opciones
-    String options[] = { "Characters","Games" ,"Consoles"};
-
-    @FXML
-    private ChoiceBox<String> choiceBox;
+    private String[] options = {"Characters","Games","Consoles"}; 
+    private String opcion="";
 
     @FXML
-    private AnchorPane container;
+    private ImageView img;
+
+    @FXML 
+    private Text textMobile3;
+
     @FXML
-    private VBox vBoxR, vBoxL, yPane;
-    @FXML
-    private HBox vBoxC;
-    @FXML
-    private ScrollPane sPane;
-    @FXML
-    private ImageView gameImage;
+    private Text titulo,info;
     @FXML
     private Circle circle;
 
 
-    @FXML
-    private Text gameTitulo, gameInfo;
-
-
-
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-
-        //choiceBox.getItems().clear();
-        choiceBox.getItems().addAll(options);
-        choiceBox.setValue(options[0]);
-
         try {
             // Obtenir el recurs del template .fxml
             // URL resource = this.getClass().getResource("/assets/layout_desktop.fxml");
@@ -103,103 +73,16 @@ public class ControllerDesktop extends Controller implements Initializable{
                     jsonInfoConsoles = new JSONArray(content);
                 }
             }
-         
-
-            // Actualitza la UI amb els valors inicials de les estacions
-            setOption(choiceBox.getValue().toString());
-
-            choiceBox.setOnAction((event) -> {
-                
-                try {
-                    setOption(choiceBox.getValue().toString());
-                } catch (Exception e) {
-                    // TODO: handle exception
-                }
-                
-                
-            });
-
-            }        
-
-
-        catch (Exception e) {
-            // TODO: handle exception
-        }
-        
-        
     
-    }
-
-    //cambiar titulo
-    public void setTitle(String title) {
-        this.gameTitulo.setText(title);
-    }
-    //cambiar info
-    public void setInfo(String subtitle) {
-        this.gameInfo.setText(subtitle);
-    }
-    //cambiar imagen
-    public void setImatge(String imagePath) {
-        try {
-            Image image = new Image(Objects.requireNonNull(getClass().getResourceAsStream(imagePath)));
-            this.gameImage.setImage(image);
-        } catch (NullPointerException e) {
-            System.err.println("Error loading image asset: " + imagePath);
-            e.printStackTrace();
-        }
-    }
-    //cambia color del circulo
-    public void setCircleColor(String color) {
-        circle.setStyle("-fx-fill: " + color);
-    }
-
-    //cambiar la lista dependiendo dela opcion
-    public void setOption(String dato)throws Exception{
-
-
-        JSONArray jsonDatos = null;
-        if(dato.equals(options[0])){
-            jsonDatos=jsonInfoCharacters;
-        }
-        if(dato.equals(options[1])){
-            jsonDatos=jsonInfoGames;
-        }
-        if(dato.equals(options[2])){
-            jsonDatos=jsonInfoConsoles;
-        }
-
-         // Obtenir el recurs del template .fxml
-        URL resource = this.getClass().getResource("/assets/listitem.fxml");
-
-        // Esborrar la llista anterior
-        yPane.getChildren().clear();
-
-        // Generar la nova llista a partir de 'jsonInfo'
-        for (int i = 0; i < jsonDatos.length(); i++) {
-            // Obtenir l'objecte JSON individual (animal)
-
-            JSONObject character = jsonDatos.getJSONObject(i);
-
-            // Extreure la informació necessària del JSON
-            String name = character.getString("name");
-            String image = character.getString("image");
-
-            // Carregar el template de 'listItem.fxml'
-            FXMLLoader loader = new FXMLLoader(resource);
-            Parent itemTemplate = loader.load();
-            ControllerListItem itemController = loader.getController();
-
-            // Assignar els valors als controls del template
-            itemController.setTitle(name);
-            itemController.setImatge("/data/images/"+image);
-            itemController.setParentController(this);
             
-            // Afegir el nou element a 'yPane'
-            yPane.getChildren().add(itemTemplate);
-        }
-    }
+        }catch(Exception e){
+            System.out.println(e.getMessage());
 
-    //cambiar los datos al caracter elejido usando el
+        }
+
+
+        
+    }
 
     public void setCharacters(String nombre) throws Exception{
          // Obtenir el recurs del template .fxml
@@ -332,14 +215,43 @@ public class ControllerDesktop extends Controller implements Initializable{
 
 
     public void accion(String name) throws Exception{
-        if (choiceBox.getValue().equals(options[0])){
+        System.out.println(name+" Viendo que cosa le envia");
+        opcion=((ControllerMobile_2)UtilsViews.getController("Mobile_2")).getOption();
+
+        if (opcion.equals(options[0])){
             setCharacters(name);
         }
-        if (choiceBox.getValue().equals(options[1])){
+        if (opcion.equals(options[1])){
             setGames(name);
         }
-        if (choiceBox.getValue().equals(options[2])){
+        if (opcion.equals(options[2])){
             setConsoles(name);
         }
+        textMobile3.setText(name);
+        UtilsViews.setView("Mobile_3");
+    }
+    
+
+    //cambiar titulo
+    public void setTitle(String title) {
+        this.titulo.setText(title);
+    }
+    //cambiar info
+    public void setInfo(String subtitle) {
+        this.info.setText(subtitle);
+    }
+    //cambiar imagen
+    public void setImatge(String imagePath) {
+        try {
+            Image image = new Image(Objects.requireNonNull(getClass().getResourceAsStream(imagePath)));
+            this.img.setImage(image);
+        } catch (NullPointerException e) {
+            System.err.println("Error loading image asset: " + imagePath);
+            e.printStackTrace();
+        }
+    }
+    //cambia color del circulo
+    public void setCircleColor(String color) {
+        circle.setStyle("-fx-fill: " + color);
     }
 }

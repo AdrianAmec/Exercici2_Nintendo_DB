@@ -30,11 +30,13 @@ public class ControllerListItem{
     @FXML
     private AnchorPane select;
 
-    private ControllerDesktop mainController;
+    
+    private Controller mainController;
 
-    public void setParentController(ControllerDesktop controller) {
+    public void setParentController(Controller controller) {
         this.mainController = controller;
     }
+    
 
     public void setTitle(String title) {
         this.title.setText(title);

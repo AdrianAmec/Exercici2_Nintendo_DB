@@ -15,17 +15,19 @@ public class Main extends Application {
     final int MIN_HEIGHT = 600;
  
     public static void main(String[] args) {
+        
         launch(args);
     }
 
     @Override
     public void start(Stage stage) throws Exception {
-
+        
         UtilsViews.parentContainer.setStyle("-fx-font: 14 arial;");
         UtilsViews.addView(getClass(), "Desktop_1", "/assets/layout_desktop.fxml");
         //UtilsViews.addView(getClass(), "Desktop_2", "/assets/layout_desktop_2.fxml");
         UtilsViews.addView(getClass(), "Mobile_1", "/assets/layout_mobile.fxml");
-        //UtilsViews.addView(getClass(), "Mobile_2", "/assets/layout_mobile_2.fxml");
+        UtilsViews.addView(getClass(), "Mobile_2", "/assets/layout_mobile_2.fxml");
+        UtilsViews.addView(getClass(), "Mobile_3", "/assets/layout_mobile_3.fxml");
 
         Scene scene = new Scene(UtilsViews.parentContainer);
 
