@@ -11,9 +11,9 @@
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.project.ControllerMobile_2">
    <children>
-      <VBox style="-fx-background-color: #aadaaa;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <VBox alignment="TOP_CENTER" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #aadaaa;">
                <children>
                   <Button fx:id="buttonBack" mnemonicParsing="false" onAction="#back" prefHeight="40.0" prefWidth="40.0" styleClass="circular-button" stylesheets="@styles.css" text="←">
                      <font>
@@ -27,7 +27,7 @@
                   </Text>
                </children>
             </HBox>
-            <ScrollPane hbarPolicy="NEVER" vbarPolicy="NEVER">
+            <ScrollPane fitToWidth="true" hbarPolicy="NEVER" maxWidth="-Infinity" prefWidth="300.0" vbarPolicy="NEVER">
                <content>
                   <VBox fx:id="yPane2" alignment="CENTER" />
                </content>

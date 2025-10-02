@@ -21,7 +21,7 @@
                   <Font size="34.0" />
                </font>
             </Text>
-            <HBox fx:id="hBoxC" prefWidth="570.0">
+            <HBox fx:id="hBoxC" alignment="TOP_CENTER">
                <children>
                   <VBox fx:id="vBoxR" prefWidth="261.0">
                      <children>
@@ -30,7 +30,7 @@
                               <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                            </VBox.margin>
                         </ChoiceBox>
-                        <ScrollPane fx:id="sPane" hbarPolicy="NEVER" prefWidth="198.0" vbarPolicy="NEVER">
+                        <ScrollPane fx:id="sPane" accessibleRole="MENU_BUTTON" hbarPolicy="NEVER" prefWidth="198.0" vbarPolicy="NEVER">
                            <content>
                               <VBox fx:id="yPane" prefWidth="194.0">
                                  <cursor>
@@ -42,19 +42,19 @@
                   </VBox>
                   <ScrollPane hbarPolicy="NEVER" prefWidth="356.0" vbarPolicy="NEVER">
                      <content>
-                        <VBox fx:id="vBoxL" alignment="TOP_CENTER">
+                        <VBox fx:id="vBoxL" alignment="TOP_CENTER" prefWidth="156.0">
                            <cursor>
                               <Cursor fx:constant="V_RESIZE" />
                            </cursor>
                            <children>
-                              <ImageView fx:id="gameImage" fitHeight="339.0" fitWidth="352.0" pickOnBounds="true" preserveRatio="true" />
-                              <Text fx:id="gameInfo" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="373.13671875" />
+                              <ImageView fx:id="gameImage" fitHeight="320.0" fitWidth="306.0" pickOnBounds="true" preserveRatio="true" />
+                              <Text fx:id="gameInfo" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="316.3367919921875" />
                               <Circle fx:id="circle" centerY="50.0" fill="WHITE" radius="8.0" stroke="BLACK" strokeType="INSIDE">
                                  <VBox.margin>
                                     <Insets />
                                  </VBox.margin>
                               </Circle>
-                              <Text fx:id="gameTitulo" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="372.13671875">
+                              <Text fx:id="gameTitulo" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="324.13671875">
                                  <VBox.margin>
                                     <Insets bottom="20.0" />
                                  </VBox.margin>
