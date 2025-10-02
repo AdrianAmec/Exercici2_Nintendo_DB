@@ -39,7 +39,7 @@ public class ControllerListItem{
     }
     @FXML
     public void selectOption(MouseEvent event) throws Exception{
-        System.out.println(this.getTitle());
+        //System.out.println(this.getTitle());
         mainController.accion(this.getTitle().toString());
     }
     @FXML

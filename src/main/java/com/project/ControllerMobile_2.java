@@ -117,9 +117,9 @@ public class ControllerMobile_2 extends Controller implements Initializable {
         URL resource = this.getClass().getResource("/assets/listitem.fxml");
 
         // Esborrar la llista anterior
-        System.out.println("Error?");
+        //System.out.println("Error?");
         yPane2.getChildren().clear();
-        System.out.println("SISISISI");
+        //System.out.println("SISISISI");
 
         // Generar la nova llista a partir de 'jsonInfo'
         for (int i = 0; i < jsonDatos.length(); i++) {

@@ -19,7 +19,7 @@ public class ControllerMobile {
         opcion=boton.getText().toString();
         ((ControllerMobile_2)UtilsViews.getController("Mobile_2")).updateDatos();
         
-        System.out.println("FIN SELECT ------------------------------");
+        //System.out.println("FIN SELECT ------------------------------");
     }
 
     public String getOption(){
